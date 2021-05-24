@@ -1,37 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
 function App() {
 
-  const champ = {
-    fName : 'Wolf',
-    lName : 'Gupta',
-    age : 9,
-    job : 'Software Engineer',
-    company : 'Google Inc',
-    Yearlypckg : '1.2 Crore',
-    education : 'WhiteHat Junior'   
-  }
-
-  const  inputPlaceHolder = 'Enter your details';
-
-  //getter 
-  const getFullName = () => {
-    return `${champ.fName} ${champ.lName}`;
-  }
-
-  //input
-  const detailsInputBox = <input type='text' placeholder={inputPlaceHolder} autoComplete />;
+  const blogObject = {
+    title: 'Lorem Ipsum',
+    content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem ipsum dolor sit amet.'
+  };
 
   return (
-    <div className="App">
-      <h3>Full Name: {getFullName()}</h3>
-      <p>Age: {champ.age} years</p>
-      <p>Education: {champ.education}</p>
-      <p>Job: {champ.job} at {champ.company}</p>
-      <p>Annual Salary: {champ.Yearlypckg}</p>
-      {detailsInputBox}
-    </div>
+
+    React.createElement("div", {
+      className: "App"
+    },
+      React.createElement("div", null,
+        React.createElement("h3", null, blogObject.title),
+        React.createElement("p", null, blogObject.content)),
+      React.createElement("hr", null),
+      React.createElement("div", null,
+        React.createElement("h3", null, blogObject.title),
+        React.createElement("p", null, blogObject.content)),
+      React.createElement("hr", null),
+      React.createElement("div", null,
+        React.createElement("h3", null, blogObject.title),
+        React.createElement("p", null, blogObject.content)))
   );
 }
 
