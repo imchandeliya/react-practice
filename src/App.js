@@ -2,27 +2,35 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const fName = 'Wolf';
-  const lName = 'Gupta';
-  const age = 9;
-  const job = 'Software Engineer';
-  const company = 'Google Inc';
-  const Yearlypckg = '1.2 Crore';
-  const education = 'WhiteHat Junior';
 
-  const getFullName = (fName, lName) => {
-    return `${fName} ${lName}`;
+  const champ = {
+    fName : 'Wolf',
+    lName : 'Gupta',
+    age : 9,
+    job : 'Software Engineer',
+    company : 'Google Inc',
+    Yearlypckg : '1.2 Crore',
+    education : 'WhiteHat Junior'   
   }
 
-  
+  const  inputPlaceHolder = 'Enter your details';
+
+  //getter 
+  const getFullName = () => {
+    return `${champ.fName} ${champ.lName}`;
+  }
+
+  //input
+  const detailsInputBox = <input type='text' placeholder={inputPlaceHolder} autoComplete />;
 
   return (
     <div className="App">
-      <h3>Full Name: {getFullName(fName, lName)}</h3>
-      <p>Age: {age} years</p>
-      <p>Education: {education}</p>
-      <p>Job: {job} at {company}</p>
-      <p>Annual Salary: {Yearlypckg}</p>
+      <h3>Full Name: {getFullName()}</h3>
+      <p>Age: {champ.age} years</p>
+      <p>Education: {champ.education}</p>
+      <p>Job: {champ.job} at {champ.company}</p>
+      <p>Annual Salary: {champ.Yearlypckg}</p>
+      {detailsInputBox}
     </div>
   );
 }
