@@ -1,5 +1,8 @@
 import './App.css';
-import BlogCard from './component/BlogCard';
+// import HomePageBlogCard from './component/BlogCard';
+
+import { BlogCard, noBlogs } from './component/BlogCard';
+import { dumpLogs, isArrayEmpty } from './utility/Utils';
 
 
 function App() {
@@ -23,14 +26,13 @@ function App() {
         }
     ]
 
-    const blogCards = blogArr.map((item) => {
-        console.log(item);
-
+    const blogCards = isArrayEmpty(blogArr) ? [] : blogArr.map((item) => {
+        // console.log(item);
+        dumpLogs(item);
         return (
             <BlogCard className='BlogCard' key={item.id} title={item.title} content={item.content} />
         );
     });
-
 
     return (
         <div className='App'>
