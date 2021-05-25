@@ -14,7 +14,7 @@ const BlogCard = (props) => {
     );
 }
 
-const noBlogs = () => {
+const NoBlogs = () => {
     const message = 'Sorry, there are no blogs available at the moment!';
     return(
         <div className='NoBlogs'>
@@ -23,4 +23,4 @@ const noBlogs = () => {
     );
 }
 
-export {BlogCard, noBlogs};
+export {BlogCard, NoBlogs};

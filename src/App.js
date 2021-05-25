@@ -1,7 +1,7 @@
 import './App.css';
 // import HomePageBlogCard from './component/BlogCard';
 
-import { BlogCard, noBlogs } from './component/BlogCard';
+import { BlogCard, NoBlogs } from './component/BlogCard';
 import { dumpLogs, isArrayEmpty } from './utility/Utils';
 
 
@@ -26,7 +26,7 @@ function App() {
         }
     ]
 
-    const blogCards = isArrayEmpty(blogArr) ? [] : blogArr.map((item) => {
+    const blogCards = isArrayEmpty(blogArr) ? <NoBlogs/> : blogArr.map((item) => {
         // console.log(item);
         dumpLogs(item);
         return (
