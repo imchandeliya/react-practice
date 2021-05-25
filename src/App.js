@@ -4,6 +4,7 @@ import BlogCard from './component/BlogCard';
 
 function App() {
 
+    //array object
     const blogArr = [
         {
             id: 1,
