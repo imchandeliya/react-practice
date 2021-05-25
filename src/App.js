@@ -1,4 +1,6 @@
 import './App.css';
+import BlogCard from './component/BlogCard';
+
 
 function App() {
 
@@ -24,10 +26,7 @@ function App() {
         console.log(item);
 
         return (
-            <div className='BlogCard' key={item.id}>
-                <h3>{item.title}</h3>
-                <p>{item.content}</p>
-            </div>
+            <BlogCard className='BlogCard' key = {item.id} title = {item.title} content = {item.content}/>
         );
     });
 
