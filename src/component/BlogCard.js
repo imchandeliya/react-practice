@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { dumpLogs } from '../utility/Utils';
+import classes from '../BlogCardModel.module.css';
 
 const BlogCard = (props) => {
     // console.log(props);
     dumpLogs(props);
 
     return (
-        <div className='BlogCard'>
+        <div className={classes.BlogCard} >
             <h3>{props.title}</h3>
             <p>{props.content}</p>
         </div>
